@@ -27,9 +27,9 @@ def assemble(ancestors):
     """
     assemble new class from setting
     :param ancestors:
-    Example:
+    Setting Example:
     # {
-    #     "import.class.path": {
+    #     "the.class.path": {
     #         "args": ["a1", "a2"],
     #         "kwargs": {
     #             "kw1": "Hello",
@@ -73,6 +73,7 @@ def load_config():
     :return:
     """
     config = Config("config.yaml")
+    # print(config)
     class_setting = dict()
     for item in config["dynamic"]["inherit"].values():
         cls_path = item["path"]

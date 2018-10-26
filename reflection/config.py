@@ -26,7 +26,7 @@ class Config(object):
         del self.cfg[key]
 
     def __repr__(self):
-        return str(self.cfg)
+        return str(dict(self.cfg))
 
     def save(self):
         with open(self.filename, "w") as f:
@@ -36,13 +36,12 @@ class Config(object):
 if __name__ == '__main__':
     conf = Config("config.yaml")
     conf["mode"] = "local"
-    conf["webserver"]["host"] = "1.1.1.1"
-    conf["module"]["dga"]["enabled"] = "no"
+    conf["dynamic"]["inherit"]["cls1"]["path"] = "1.1.1.1"
     # if "test" in conf:
     #     del conf["test"]
 
     # conf.save()
 
-    print(conf.cfg)
+    print(conf)
 
 
