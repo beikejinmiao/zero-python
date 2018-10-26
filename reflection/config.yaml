@@ -1,0 +1,24 @@
+# Inherit & Assemble Python Object Dynamically from conf
+dynamic:
+  inherit:
+    cls1:
+      path: reflection.test_class.A
+      args:
+        - a1
+        - a2
+      kwargs:
+        kw1: yesyes
+        kw2: yesyes2
+
+    cls2:
+      path: reflection.test_class.B
+      args:
+        - b1
+        - b2
+        - b3
+      kwargs:
+        kwb: nono
+
+    cls3:
+      path: reflection.test_class.C
+

@@ -1,0 +1,4 @@
+scrapy==1.5.1
+beautifulsoup4==4.6.3
+ruamel.yaml==0.15.71
+
